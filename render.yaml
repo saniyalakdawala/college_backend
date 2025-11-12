@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: college-backend
+    env: python
+    region: oregon  # or change to your nearest region
+    plan: free
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+
+    startCommand: |
+      gunicorn app:app --timeout 120 --workers 2
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 10000
