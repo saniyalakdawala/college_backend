@@ -2,16 +2,20 @@ Flask==3.0.3
 flask-cors==4.0.1
 python-dotenv==1.0.1
 
-langchain==0.3.3
-langchain-core==0.3.10
+# LangChain ecosystem (locked to stable compatible versions)
+langchain==0.3.6
+langchain-core==0.3.15
 langchain-chroma==0.1.4
 langchain-huggingface==0.0.3
-langchain-google-genai==1.0.5
+langchain-google-genai==1.0.6
 
+# Vector DB and NLP libraries
 chromadb==0.5.5
-sentence-transformers==3.0.1
+sentence-transformers==3.1.1
 torch>=2.9.0,<3.0
-transformers==4.44.0
-unstructured>=0.18.14
+transformers==4.46.2
+
+# File parsing and PDF processing
+unstructured>=0.15.9
 pymupdf==1.24.8
 pikepdf==9.2.0
